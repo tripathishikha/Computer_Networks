@@ -79,11 +79,11 @@ for i in range(length):
 		file_num=time_list[i]
 		file_name=duration[file_num]
 		if not os.path.exists(new_path+path_fast+'/'+file_name):
-			print record_url[file_name]+",\t"+"\t",os.path.getsize(file_name),",\t"+"\t",file_num,"\n"
+			print record_url[file_name],",",os.path.getsize(file_name),",",file_num,"\n"
 			shutil.move(new_path+file_name,new_path+path_fast)
 			
 		else:
-			print record_url[file_name]+",\t"+"\t",os.path.getsize(file_name),",\t"+"\t",file_num,"\n"
+			print record_url[file_name],",",os.path.getsize(file_name),",",file_num,"\n"
 			os.remove(new_path+path_fast+'/'+file_name) 
 			shutil.move(new_path+file_name,new_path+path_fast)
 			
@@ -98,12 +98,12 @@ for i in range(length):
 		file_name=duration[file_num]
 		
 		if not os.path.exists(new_path+path_slow+'/'+file_name):
-			print record_url[file_name]+",\t"+",\t",os.path.getsize(file_name),",\t"+"\t",file_num,"\n"
+			print record_url[file_name],",",os.path.getsize(file_name),",",file_num,"\n"
 			shutil.move(new_path+file_name,new_path+path_slow)
 			
 			
 		else:
-			print record_url[file_name]+",\t"+",\t",os.path.getsize(file_name),",\t"+"\t",file_num,"\n"
+			print record_url[file_name],",",os.path.getsize(file_name),",",file_num,"\n"
 			os.remove(new_path+path_slow+'/'+file_name) 
 			shutil.move(new_path+file_name,new_path+path_slow)	
 			
